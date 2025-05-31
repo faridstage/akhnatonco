@@ -1,0 +1,589 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+
+
+
+{% block content %}
+<style>
+    .carousel-caption h1,
+    .carousel-caption h4,
+    .btn-warning,
+    .btn-light {
+        opacity: 0;
+        transform: translateY(300px);
+        animation: fadeUp 1.2s ease-out forwards;
+    }
+
+    .carousel-caption h4 {
+        animation-delay: 0.5s;
+    }
+
+    .btn-warning {
+        animation-delay: 1.5s;
+        font-size: large;
+    }
+
+    .btn-light {
+        animation-delay: 1s;
+        font-size: large;
+    }
+
+    .custom-carousel .carousel-inner,
+    .custom-carousel .carousel-item,
+    .custom-carousel .carousel-item img {
+        height: 700px;
+    }
+
+    .custom-carousel .carousel-item img {
+        object-fit: cover;
+    }
+
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+<!-- Carousel wrapper -->
+<div id="carouselBasicExample" class="carousel slide carousel-fade custom-carousel" data-mdb-ride="carousel"
+    data-mdb-interval="5000">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Inner -->
+    <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+            <img src="{% static 'projects/home-1.jpg' %}" class="d-block w-100" alt="Sunset Over the City" />
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                <h1 style="font-size: 60px;">W E L C O M E</h1>
+                <h4>CREATING A BRIGHTER FUTURE, TOGETHER</h4>
+                <a href="#" type="button" class="btn btn-warning " data-mdb-ripple-init>WHO WE ARE ></a>
+            </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+            <img src="{% static 'projects/home-4.jpg' %}" class="d-block w-100" alt="Canyon at Nigh" />
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                <h1>YOUR DREAM HOUSE</h1>
+                <h4>BUILDING YOUR VISIONS. CONSTRUCTING REALITY </h4>
+                <a href="#" type="button" class="btn btn-warning " data-mdb-ripple-init>OUR SERVICES ></a>
+            </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+            <img src="{% static 'projects/home-5.jpg' %}" class="d-block w-100" alt="Cliff Above a Stormy Sea" />
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                <h1>SWIMMING POOLS HOME</h1>
+                <h4>pools with the best view</h4>
+                <br>
+                <div class="d-flex justify-content-start align-items-center">
+                    <a href="#" type="button" class="btn btn-light me-2" data-mdb-ripple-init>READ MORE ></a>
+                    <a href="#" type="button" class="btn btn-warning" data-mdb-ripple-init>OUR GALLERY ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- Inner -->
+
+<!-- Controls -->
+<button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+</div>
+<!-- Carousel wrapper -->
+
+<!--Intro Text-->
+
+
+<div class="row">
+    <dic class="col-md-5"></dic>
+    <div class="col-md-6">
+        <h1 class="mt-3 mr-3" style="font-weight:bolder;color: black;"><b> <i style="color: rgb(235, 184, 16);"
+                    class="far fa-gem"></i> Our Vision</b></h1>
+    </div>
+</div>
+<div class="row">
+    <dic class="col-md-1"></dic>
+    <div class="col-md-10">
+        <h2 class="mt-3 mr-3" style="font-weight:bolder;color: black;text-align: center;"><b>To empower businesses with
+                cutting-edge
+                web solutions that enhance their digital presence and drive growth.</b></h2>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<br><br><br><br>
+<section class="text-center mt-4" style="background-color: #FFD54F;height: 300px;">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative" style="font-size: xxx-large;">
+            <i class="fas fa-cubes fa-3x mt-5" style="color: rgb(66, 36, 0);"></i>
+            <h5 class="fw-bold mb-3 counter" data-target="5000" style="color: rgb(243, 147, 31);font-size: xx-large;">0
+            </h5>
+            <h6 class="fw-normal mb-0">Projects</h6>
+            <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-5 mb-lg-0 position-relative" style="font-size: xxx-large;">
+            <i class="fas fa-user-group fa-3x  mt-5" style="color: rgb(66, 36, 0);"></i>
+            <h5 class="fw-bold mb-3 counter" data-target="490" style="color: rgb(243, 147, 31);font-size: xx-large;">0
+            </h5>
+            <h6 class="fw-normal mb-0">Total employees</h6>
+            <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0 position-relative" style="font-size: xxx-large;">
+            <i class="fas fa-clipboard-check fa-3x mt-5" style="color: rgb(66, 36, 0);"></i>
+            <h5 class="fw-bold mb-3 counter" data-target="100" style="color: rgb(243, 147, 31);font-size: xx-large;">0
+            </h5>
+            <h6 class="fw-normal mb-0">Clients</h6>
+            <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0 position-relative" style="font-size: xxx-large;">
+            <i class="fas fa-plug fa-3x  mt-5" style="color: rgb(66, 36, 0);"></i>
+            <h5 class="fw-bold mb-3 counter" data-target="28" style="color: rgb(243, 147, 31);font-size: xx-large;">0
+            </h5>
+            <h6 class="fw-normal mb-0">Plugins</h6>
+        </div>
+    </div>
+</section>
+
+
+<br><br><br>
+<section style="background-color: rgb(255, 254, 245);">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img class="img-fluid rounded" src="{% static 'projects/home-10.jpg' %}"
+                            style="width: 700px;height: 600px;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <div class="card mb-3" style="max-width: 25rem;height: 17rem; background-color:#FFAB00 ;">
+                            <h5 class="card-header">Trust & Craftsmanship</h5>
+                            <div class="card-body">
+                                <p class="card-text">a promise of quality, trust, and enduring craftsmanship. With every
+                                    project, we bring decades of experience, a deep commitment to safety, and a sharp
+                                    eye for detail. From foundation to finish</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card  mb-3" style="max-width: 25rem;height: 17rem;background-color:#FFC400 ;">
+                            <h5 class="card-header"> Client-Focused Excellence</h5>
+                            <div class="card-body">
+                                <p class="card-text">We believe that every successful project begins with strong
+                                    collaboration and ends with lasting satisfaction. As your trusted construction
+                                    partner, we listen, plan, and execute with precision</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card  mb-3" style="max-width: 25rem;height: 17rem;background-color: #FFD740; ">
+                            <h5 class="card-header">Building the Future</h5>
+                            <div class="card-body">
+                                <p class="card-text">Our mission is more than building structures — it’s about shaping
+                                    the future with innovation, integrity, and dedication. With a strong foundation
+                                    built on experience and expertise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card  mb-3" style="max-width: 25rem;height: 17rem; background-color: #FFE57F;">
+                            <h5 class="card-header">Reliable, Skilled, and Passionate</h5>
+                            <div class="card-body">
+                                <p class="card-text">With every brick we lay and every beam we raise, our goal is
+                                    simple: to deliver dependable, high-quality construction that reflects our passion
+                                    and professionalism</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br>
+
+<div class="row">
+    <dic class="col-md-5"></dic>
+    <div class="col-md-6">
+        <h1 class="mt-3 mr-3" style="font-weight:bolder;color: black;"><b> <i style="color: rgb(235, 184, 16);"
+                    class="far fa-gem"></i> Projects</b></h1>
+    </div>
+</div>
+<div class="row">
+    <dic class="col-md-1"></dic>
+    <div class="col-md-10">
+        <h2 class="mt-3 mr-3" style="font-weight:bolder;color: black;text-align: center;"><b>To empower businesses with
+                cutting-edge
+                web solutions that enhance their digital presence and drive growth.</b></h2>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="{% static 'projects/Eva.mp4' %}" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 mt-5">
+            <!-- Modal gallery -->
+            <section class="">
+                <!-- Section: Images -->
+                <section class="">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                data-ripple-color="light">
+                                <img src="{% static 'projects/daber.jpg' %}" class="w-100" />
+                                <h5 style="text-align: center;">Daber</h5>
+                                <a href="#!" data-mdb-modal-init data-mdb-target="#exampleModal1">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                data-ripple-color="light">
+                                <img src="{% static 'projects/hydepark.jpg' %}" class="w-100" />
+                                <h5 style="text-align: center;">Hydepark</h5>
+                                <a href="#!" data-mdb-modal-init data-mdb-target="#exampleModal2">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                                data-ripple-color="light">
+                                <img src="{% static 'projects/horus.jpg' %}" class="w-100" />
+                                <h5 style="text-align: center;">Horus</h5>
+                                <a href="#!" data-mdb-modal-init data-mdb-target="#exampleModal3">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Images -->
+                <!-- Modal gallery -->
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <div class="d-grid gap-2">
+                            <a href="{% url 'projects' %}" class="btn"
+                                style="background-color:rgb(235, 184, 16);font-size: x-large ;" type="button"
+                                data-mdb-ripple-init>Show All Projects And Photos <i class="fas fa-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br><br>
+
+<section class="py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="text-muted">Dedicated professionals working together to achieve excellence</p>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="d-flex justify-content-between mb-3">
+            <button class="btn btn-outline-secondary" id="scroll-left">
+                &larr;
+            </button>
+            <button class="btn btn-outline-secondary" id="scroll-right">
+                &rarr;
+            </button>
+        </div>
+
+        <!-- Scrollable Row -->
+        <div class="d-flex overflow-auto gap-4" id="team-scroll" style="scroll-behavior: smooth;">
+            <!-- Team Member 1 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/kkhawam.jpg' %}"
+                        style="width: 150px;height: 160px;border-radius: 50%;" alt="Team Member 1" class="mb-4 shadow">
+                    <h5 class="mb-1">Karim Khawam</h5>
+                    <p class="text-muted mb-2">CEO & Founder</p>
+                    <p class="small mb-0">Leading our company's vision and strategy with over 30 years of experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/reham.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 2" class="mb-4 shadow">
+                    <h5 class="mb-1">Reham Refky</h5>
+                    <p class="text-muted mb-2">HR Manager</p>
+                    <p class="small mb-0">Fostering talent, shaping teams, and ensuring every employee feels valued and
+                        empowered</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/miral.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 3" class="mb-4 shadow">
+                    <h5 class="mb-1">Miral Nasry</h5>
+                    <p class="text-muted mb-2">Head of Technical Department</p>
+                    <p class="small mb-0">Overseeing technical operations and ensuring seamless delivery of
+                        innovative solutions</p>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/miriam.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 4" class="mb-4 shadow">
+                    <h5 class="mb-1">Miriam Adel</h5>
+                    <p class="text-muted mb-2">Administrative & HR Coordinator</p>
+                    <p class="small mb-0">Keeping things organized and people connected — every day, behind the scenes
+                    </p>
+                </div>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/sandra.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 7" class="mb-4 shadow">
+                    <h5 class="mb-1">Sandra Saad</h5>
+                    <p class="text-muted mb-2">Administrative & HR Coordinator</p>
+                    <p class="small mb-0">Supporting daily operations and ensuring smooth communication across teams
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/mina.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 6" class="mb-4 shadow">
+                    <h5 class="mb-1">Mina Victor</h5>
+                    <p class="text-muted mb-2">ٍSenior Accountant</p>
+                    <p class="small mb-0">Managing budgets, audits, and reports with precision and professionalism.
+                    </p>
+                </div>
+            </div>
+            <!-- Team Member 7 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/peter.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 5" class="mb-4 shadow">
+                    <h5 class="mb-1">Peter Sameh</h5>
+                    <p class="text-muted mb-2">ٍSenior Accountant</p>
+                    <p class="small mb-0">Ensuring financial accuracy and integrity through expert oversight and
+                        analysis
+                    </p>
+                </div>
+            </div>
+            <!-- Team Member 8 -->
+            <div class="flex-shrink-0" style="width: 250px;">
+                <div class="team-member text-center p-4 border rounded shadow-sm">
+                    <img src="{% static 'projects/farid.jpg' %}" style="width: 150px;height: 160px;border-radius: 50%;"
+                        alt="Team Member 8" class="mb-4 shadow">
+                    <h5 class="mb-1">Farid Fayez</h5>
+                    <p class="text-muted mb-2">IT Engineer</p>
+                    <p class="small mb-0">Keeping our systems secure, connected, and running smoothly every day.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<script>
+    const scrollContainer = document.getElementById('team-scroll');
+    const scrollAmount = 300; // pixels to scroll
+
+    document.getElementById('scroll-left').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // smaller = faster
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = Math.ceil(target / speed);
+
+                if (count < target) {
+                    counter.innerText = count + increment > target ? target : count + increment;
+                    setTimeout(updateCount, 20); // adjust for smoothness
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+        <div class="card text-bg-warning mb-3" style="max-width: 25rem;height: 15rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-bg-warning mb-3" style="max-width: 25rem;height: 15rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-bg-warning mb-3" style="max-width: 25rem;height: 15rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- Intro cards -->
+
+<!-- 
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3 mb-4">
+            <div class="card border border-warning shadow-0 mb-3" style="max-width: 20rem;height: 15rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card border border-warning shadow-0 mb-3" style="max-width: 20rem;height: 15rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card border border-warning shadow-0 mb-3" style="max-width: 20rem;height: 15rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+{% endblock content %}

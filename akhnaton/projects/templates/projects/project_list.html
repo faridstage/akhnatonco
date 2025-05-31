@@ -1,0 +1,51 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+
+
+
+{% block navbar_class %}
+navbar-dark sticky-top custom-sticky-navbar
+{% endblock navbar_class %}
+
+<br>
+<br>
+<br>
+<br>
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        {% for project in projects %}
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="{{ project.titleImage.url  }}" width="400px" height="300px" class="card-img-top mt-4"
+                    alt="Fissure in Sandstone" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-warning" type="button" href="{% url 'project_detail' project.id %}"
+                            data-mdb-ripple-init>View Project</a>
+                        <a class="btn btn-dark" type="button" href="{% url 'edit_project' project.id %}"
+                            data-mdb-ripple-init>Edit Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,61 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+
+{% block navbar_class %}
+navbar-dark sticky-top custom-sticky-navbar
+{% endblock navbar_class %}
+
+{% block content %}
+<div class="container-fluid mt-5">
+    <div class="row">
+        <h2 class="mb-5"
+            style="justify-content: center; text-align: center;font-weight: 900;color: black;font-size:50px ;">
+            {{ project.name }}</h2>
+        {% for image in images %}
+        <div style="justify-content: center; text-align: center;" class="col-md-3">
+            <div class="card">
+                <img src="{{ image.image.url }}" width="450px" height="300px" class="card-img-top mt-2 rounded-9"
+                    alt="Fissure in Sandstone">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Image #</h5>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="d-grid gap-2">
+            <a class="btn btn-warning my-5" style="height: 70px;font-size: xx-large;" type="button"
+                href="{% url 'projects' %}" data-mdb-ripple-init>Go
+                Back To All Projects <i class="fas fa-circle-arrow-right"></i></a>
+        </div>
+
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+<!-- <div class="container mt-5">
+    <a href="{% url 'projects' %}" class="btn btn-dark mb-3">Go Back</a>
+    <h2>{{ project.name }}</h2>
+    <img src="{{ project.titleImage.url }}" class="img-fluid mb-3" alt="Title Image">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+
+        </div>
+    </div>
+</div> -->
