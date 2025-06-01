@@ -14,13 +14,27 @@ navbar-dark sticky-top custom-sticky-navbar
 
 {% block content %}
 <br>
-<br>
-<br>
-<br>
-<br>
+
+
+<div class="row">
+    <div class="col-md-10" style="font-size: xx-large;">
+        <div class="container">
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-2">
+        <a href="{% url 'add_project' %}" class="btn btn-warning">Add Project</a>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
+        <h1 style="color: rgb(53, 55, 17);text-align: center;font-family:Stencil Std, fantasy;">
+            Akhnatonco Projects
+        </h1>
         {% for project in projects %}
 
         <div class="col-sm-3">
@@ -29,9 +43,6 @@ navbar-dark sticky-top custom-sticky-navbar
                     alt="Fissure in Sandstone" />
                 <div class="card-body">
                     <h5 class="card-title">{{ project.name }}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
                     <div class="d-grid gap-2">
                         <a class="btn btn-warning" type="button" href="{% url 'project_detail' project.id %}"
                             data-mdb-ripple-init>View Project</a>
@@ -41,9 +52,11 @@ navbar-dark sticky-top custom-sticky-navbar
                 </div>
             </div>
         </div>
-
-
+        {% empty %}
+        <h1 class="mb-5">There is No Projects Yet </h1>
+        <a href="{% url 'add_project' %}" class="btn btn-warning">Add Project</a>
         {% endfor %}
+
     </div>
 </div>
 
