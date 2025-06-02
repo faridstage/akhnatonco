@@ -64,3 +64,6 @@ def project_detail(request, id):
     images = project.images.all()
     return render(request, 'projects/project_detail.html',{'project':project, 'images':images})
 
+def about(request):
+    return render(request,'projects/about.html')
+

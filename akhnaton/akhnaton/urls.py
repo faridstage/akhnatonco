@@ -29,6 +29,7 @@ urlpatterns = [
     path('add/', views.add_project, name='add_project'),
     path('projects/<int:id>/edit/', views.edit_project, name='edit_project'),
     path('projects/image/<int:image_id>/delete/', views.delete_project_image, name='delete_project_image'),
+    path('about/',views.about,name='about')
     
 ] 
 
