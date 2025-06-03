@@ -76,7 +76,7 @@ bg-white sticky-top custom-sticky-navbar
         <div class="row">
             <div class="col-6">
                 <div class="row">
-                    <dic class="col-12 mt-5">
+                    <div class="col-12 mt-3">
                         <h3><i class="fas fa-star"></i> Akhnaton For Construction & Real-Estate Development ACRED was
                             founded in 1995,<br> by Architect
                             <b style="color: black;"><i><a href="" style="color: black;">Karim M. Khawam.</a></i></b>
@@ -95,12 +95,13 @@ bg-white sticky-top custom-sticky-navbar
                         <br>
                         <h3><i class="fas fa-file-lines"></i>Would you like to explore our portfolio and see what we’ve
                             built?</h3>
+                        <br>
                         <div class="d-grid gap-2">
                             <a class="btn btn-warning rounded-5" style="height: 70px;font-size: xx-large;" type="button"
                                 href="#" data-mdb-ripple-init>Akhnaton
                                 portfolio <i class="fas fa-angles-down"></i></a>
                         </div>
-                    </dic>
+                    </div>
                 </div>
             </div>
             <div class="col-6">
@@ -121,4 +122,102 @@ bg-white sticky-top custom-sticky-navbar
         </div>
     </div>
 </section>
+<!-- message from akhanton owner -->
+<section>
+    <div class="container">
+        <div class="row justify-content-center" style="font-size: xx-large; color: black;font-weight: 900;">
+            Message From The Owner
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <hr style="border: 5px solid rgb(220, 181, 7);opacity: 9;">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card" style="background-color: rgb(253, 232, 70);">
+                    <div class="card-body" style="text-align: center;">
+                        Akhnaton For Construction & Real-Estate Development ACRED, was established in the spirit of
+                        providing a broad spectrum of Real Estate and Construction competencies.
+
+                        To be able to proliferate our products and services with unparalleled quality, we surrounded our
+                        company and ourselves with a framework of business principles and solid market insights.
+
+                        Business principles emphasize commitment to long-term interests of our clients by giving them
+                        the benefit of the breadth of our capabilities as well as our most creative thinking. We take
+                        great pride in the professional quality of our work. We have an uncompromising determination to
+                        achieve excellence in everything we undertake. We stress creativity and imagination in
+                        everything we do. We always operate with the belief that our reputation for fair dealing is our
+                        greatest asset. We are committed to maintain the highest standards of conduct; integrity and
+                        honesty at the heart of our business.
+
+                        We realize that our business is highly competitive and the market is aggressively dynamic. We
+                        constantly strive to anticipate the rapidly changing needs of our clients and to develop new
+                        products and services to meet those needs. We admit that this market will not stand still and
+                        that complacency can lead to extinction.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<section class="mt-5">
+    <div class="container">
+        <div class="row justify-content-center" style="font-size: 50px; color: black;font-weight: 900;">
+            <div style="color: rgb(118, 31, 7);text-align: center;background-image: -moz-linear-gradient();">
+                Time Line
+            </div>
+
+
+        </div>
+    </div>
+    <div class="mb-5">
+        {% include 'projects/timeline.html' %}
+    </div>
+
+</section>
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center" style="font-size: xx-large; color: black;font-weight: 900;">
+            <div class="row justify-content-center">
+                <h1 style="text-align: center;background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;"><span><i class="fas fa-star"></i></span>. In Akhnatonco We Love Our Work
+                    .<span><i class="fas fa-star"></i></span>
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 {% endblock content %}
+
+
+{% block social %}
+<!-- Facebook -->
+<a data-mdb-ripple-init class="btn btn-primary" style="background-color: #3b5998;"
+    href="https://www.facebook.com/profile.php?id=100054644430517" target="_blank" role="button"><i
+        class="fab fa-facebook-f"></i></a>
+<!-- Google -->
+<a data-mdb-ripple-init class="btn btn-primary" style="background-color: #dd4b39;" href="https://www.akhnatonco.com"
+    target="_blank" role="button"><i class="fab fa-google"></i></a>
+
+<!-- Linkedin -->
+<a data-mdb-ripple-init class="btn btn-primary" style="background-color: #0082ca;"
+    href="https://www.linkedin.com/company/akhnaton-for-construction-and-real-estate-development/" target="_blank"
+    role="button"><i class="fab fa-linkedin-in"></i></a>
+
+<!-- Youtube -->
+<a data-mdb-ripple-init class="btn btn-primary" style="background-color: #ed302f;"
+    href="https://www.youtube.com/@akhnaton-j4p" target="_blank" role="button"><i class="fab fa-youtube"></i></a>
+
+<!-- Whatsapp -->
+<a data-mdb-ripple-init class="btn btn-primary" style="background-color: #25d366;" href="https://wa.me/201022207319"
+    target="_blank" role="button"><i class="fab fa-whatsapp"></i></a>
+
+<br><br>
+{% endblock social %}

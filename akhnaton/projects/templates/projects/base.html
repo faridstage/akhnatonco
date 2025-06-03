@@ -169,6 +169,8 @@
         <!-- Grid container -->
         <div class="container p-4">
             <!-- Section: Social media -->
+
+            {% block social %}
             <section class="mb-4">
                 <!-- Facebook -->
                 <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1"
@@ -184,12 +186,15 @@
                     href="https://www.linkedin.com/company/akhnaton-for-construction-and-real-estate-development/"
                     target="_blank" role="button"><i class="fab fa-linkedin-in"></i></a>
 
-                <!-- Github -->
+                <!-- Youtube -->
                 <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1"
                     href="https://www.youtube.com/@akhnaton-j4p" target="_blank" role="button"><i
                         class="fab fa-youtube"></i></a>
             </section>
             <!-- Section: Social media -->
+            {% endblock social %}
+
+
 
             <!-- Section: Form -->
             <section class="">
