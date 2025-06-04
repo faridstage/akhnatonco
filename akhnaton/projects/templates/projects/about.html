@@ -74,12 +74,23 @@ bg-white sticky-top custom-sticky-navbar
 <section class="py-3 py-md-5">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <!-- Image Column -->
+            <div class="col-12 col-md-6 order-1 order-md-2 mb-4">
+                <div class="card">
+                    <img src="{% static 'projects/karim.jpg' %}" class="card-img-top rounded-1" alt="Karim M. Khawam">
+                    <div class="card-body py-2" style="background-color: rgb(207, 203, 203);">
+                        <h6 class="card-title text-center text-black m-0" style="font-weight: 600;">Karim M. Khawam</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="col-12 col-md-6 order-2 order-md-1">
                 <div class="row">
-                    <div class="col-12 mt-3">
+                    <div class="col-12">
                         <h3><i class="fas fa-star"></i> Akhnaton For Construction & Real-Estate Development ACRED was
                             founded in 1995,<br> by Architect
-                            <b style="color: black;"><i><a href="" style="color: black;">Karim M. Khawam.</a></i></b>
+                            <b class="text-black"><i><a href="#" class="text-black">Karim M. Khawam.</a></i></b>
                         </h3>
                         <br>
                         <h3>
@@ -93,35 +104,26 @@ bg-white sticky-top custom-sticky-navbar
                             solutions.
                         </h4>
                         <br>
-                        <h3><i class="fas fa-file-lines"></i>Would you like to explore our portfolio and see what we’ve
+                        <h3><i class="fas fa-file-lines"></i> Would you like to explore our portfolio and see what we’ve
                             built?</h3>
                         <br>
+                    </div>
+
+                    <!-- Button Row -->
+                    <div class="col-12">
                         <div class="d-grid gap-2">
-                            <a class="btn btn-warning rounded-5" style="height: 70px;font-size: xx-large;" type="button"
-                                href="#" data-mdb-ripple-init>Akhnaton
+                            <a class="btn btn-warning rounded-5" style="height: 70px;font-size: xx-large;"
+                                href="#">Akhnaton
                                 portfolio <i class="fas fa-angles-down"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="row">
-                    <div class="col-9">
-                        <div class="card">
-                            <img src="{% static 'projects/karim.jpg' %}" width="450px"
-                                class="card-img-top mt-2 rounded-1" alt="Fissure in Sandstone">
-                        </div>
 
-                        <div class="card-body" style="background-color: rgb(207, 203, 203);">
-                            <h5 class="card-title" style="text-align: center;color: black;">Karim M. Khawam</h5>
-                        </div>
-                    </div>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
+
 <!-- message from akhanton owner -->
 <section>
     <div class="container">
@@ -134,7 +136,7 @@ bg-white sticky-top custom-sticky-navbar
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-8">
+            <div class="col-12 col-md-12 col-lg-9">
                 <div class="card" style="background-color: rgb(253, 232, 70);">
                     <div class="card-body" style="text-align: center;">
                         Akhnaton For Construction & Real-Estate Development ACRED, was established in the spirit of
