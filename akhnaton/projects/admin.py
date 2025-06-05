@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from django import forms
 
-from .models import Project, ProjectImage
+from .models import Category, Project, ProjectImage
 
 class ProjectImageInline(admin.TabularInline):
     model = ProjectImage
@@ -14,4 +14,5 @@ class ProjectAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Project)
 admin.site.register(ProjectImage)
+admin.site.register(Category)
 

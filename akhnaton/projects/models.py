@@ -5,6 +5,7 @@ from django.db import models
 class Project(models.Model):
     name = models.CharField(max_length=100)
     titleImage = models.ImageField(upload_to='project_images/', default='coming.jpg')
+    category = models.ForeignKey('Category', related_name='projects', on_delete=models.SET_NULL, null=True, blank=True)
 
 
     def __str__(self):
@@ -17,3 +18,13 @@ class ProjectImage(models.Model):
 
     def __str__(self):
         return f"Image for {self.project.name}"
+    
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+    
+        class Meta:
+            ordering = ['name']
+

@@ -18,50 +18,81 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
 {% block content %}
 <br>
 
-
-<div class="row">
-    <div class="col-md-10" style="font-size: xx-large;">
-        <div class="container">
-
-        </div>
-
-    </div>
-
-
-    <div class="col-md-2">
-        <a href="{% url 'add_project' %}" class="btn btn-warning">Add Project</a>
-    </div>
-</div>
-
 <div class="container">
     <div class="row">
-        <h1 style="color: rgb(53, 55, 17);text-align: center;font-family:Stencil Std, fantasy;">
-            Akhnatonco Projects
-        </h1>
-        {% for project in projects %}
+        <!-- Sidebar for Categories -->
+        <div class="col-md-3 mb-4 mt-3">
+            <div class="row mb-4">
+                <div class="col-md-12 text-center">
+                    <a href="{% url 'add_project' %}" class="btn text-white"
+                        style="background: linear-gradient(45deg, #e3a900, #000000); border: none;">
+                        Add Project
+                    </a>
+                </div>
+            </div>
+            <div class="card shadow-sm sticky-top"
+                style="top: 100px;border:solid 1px #e3a900 ; border-radius: 10px 10px 0 0;">
+                <div class="card-body p-0">
+                    <h5 class="card-title bg-warning text-white text-center py-3 m-0 rounded-top">Categories</h5>
+                    <ul class="list-group list-group-flush">
 
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="{{ project.titleImage.url  }}" width="400px" height="300px" class="card-img-top mt-4"
-                    alt="Fissure in Sandstone" />
-                <div class="card-body">
-                    <h5 class="card-title">{{ project.name }}</h5>
-                    <div class="d-grid gap-2">
-                        <a class="btn btn-warning" type="button" href="{% url 'project_detail' project.id %}"
-                            data-mdb-ripple-init>View Project</a>
-                        <a class="btn btn-dark" type="button" href="{% url 'edit_project' project.id %}"
-                            data-mdb-ripple-init>Edit Project</a>
-                    </div>
+                        <!-- 'All' link -->
+                        <li class="list-group-item p-0">
+                            <a href="{% url 'projects' %}"
+                                class="d-block py-2 px-3 fw-bold text-decoration-none {% if not request.GET.category %}bg-dark text-white{% else %} text-warning {% endif %}">
+                                All
+                            </a>
+                        </li>
+
+                        <!-- Category links -->
+                        {% for category in categories %}
+                        <li class="list-group-item p-0">
+                            <a href="?category={{ category.id }}" class="d-block py-2 px-3 fw-bold text-warning text-decoration-none
+                            {% if request.GET.category == category.id|stringformat:" s" %} bg-dark text-white {% else
+                                %} bg-warning text-white {% endif %}">
+                                {{ category.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
                 </div>
             </div>
         </div>
-        {% empty %}
-        <h1 class="mb-5">There is No Projects Yet </h1>
-        <a href="{% url 'add_project' %}" class="btn btn-warning">Add Project</a>
-        {% endfor %}
 
+
+        <!-- Main Content (Projects Grid) -->
+        <div class="col-md-9">
+            <h1 class="text-center mb-4" style="color: rgb(53, 55, 17); font-family: Stencil Std, fantasy;">
+                Akhnatonco Projects
+            </h1>
+
+            <div class="row">
+                {% for project in projects %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="{{ project.titleImage.url }}" class="card-img-top"
+                            style="height: 200px; object-fit: cover;" alt="Project Image">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <div class="mt-auto">
+                                <a class="btn btn-warning btn-sm w-100 mb-2"
+                                    href="{% url 'project_detail' project.id %}">View Project</a>
+                                <a class="btn btn-dark btn-sm w-100" href="{% url 'edit_project' project.id %}">Edit
+                                    Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <h4>There is No Projects Yet</h4>
+                    <a href="{% url 'add_project' %}" class="btn btn-warning mt-2">Add Project</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
-
 
 {% endblock content %}

@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import ProjectImageFormSet, ProjectForm
 
-from .models import Project, ProjectImage
+from .models import Category, Project, ProjectImage
 
 
 # Create your views here.
@@ -56,8 +56,19 @@ def index(request):
 
 
 def project_list(request):
-    projects = Project.objects.all()
-    return render(request,'projects/project_list.html',{'projects':projects})
+    category_id = request.GET.get('category')  # e.g., ?category=2
+    categories = Category.objects.all()
+
+    if category_id:
+        projects = Project.objects.filter(category_id=category_id)
+    else:
+        projects = Project.objects.all()
+
+    return render(request, 'projects/project_list.html', {
+        'projects': projects,
+        'categories': categories,
+        'selected_category': int(category_id) if category_id else None,
+    })
 
 
 def project_detail(request, id):
