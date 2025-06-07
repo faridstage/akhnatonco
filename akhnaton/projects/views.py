@@ -79,3 +79,6 @@ def project_detail(request, id):
 def about(request):
     return render(request,'projects/about.html')
 
+def tools(request):
+    return render(request,'projects/tools.html')
+
