@@ -1,0 +1,118 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+
+{% block navbar_class %}
+navbar-dark bg-white sticky-top custom-sticky-navbar
+{% endblock navbar_class %}
+
+
+{% block content %}
+<style>
+    .gallery-wrapper {
+        position: relative;
+    }
+
+    .thumbnails {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        scroll-behavior: smooth;
+    }
+
+    .thumbnails img {
+        cursor: pointer;
+        max-height: 100px;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 35%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .arrow-left {
+        left: -10px;
+    }
+
+    .arrow-right {
+        right: -10px;
+    }
+
+    .main-image {
+        width: 100%;
+        /* تشغل 100% من عرض الحاوية */
+        max-width: 700px;
+        /* ولا تتجاوز 700px على الشاشات الكبيرة */
+        height: auto;
+        /* ارتفاع تلقائي للحفاظ على النسب */
+        max-height: 800px;
+        /* تحديد حد أقصى للارتفاع إذا رغبت */
+    }
+</style>
+
+<div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center mt-4">
+                <h1 style="color: orange;font-weight: 900;"><i class="far fa-gem" style="color: rgb(223, 179, 3);"></i>
+                    Certificates of Appreciation <i class="far fa-gem" style="color:  rgb(223, 179, 3);"></i></h1>
+            </div>
+        </div>
+        <!-- Main Image -->
+        <div class="row justify-content-center">
+            <div class="col-12 text-center" style="margin-bottom: -100px;">
+                <img id="mainImage" src="{% static 'projects/cer1.jpg' %}" class="main-image" alt="Main" />
+            </div>
+        </div>
+
+
+        <!-- Thumbnails with arrows -->
+        <div class="gallery-wrapper">
+            <button class="arrow arrow-left" onclick="scrollThumbnails(-200)">&#8592;</button>
+            <div id="thumbnailsContainer" class="thumbnails px-5">
+                <img src="{% static 'projects/cer1.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer2.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer3.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer4.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer5.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer6.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer7.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer8.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer9.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer10.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer11.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer12.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer13.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer14.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer15.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer16.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer17.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer18.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer19.jpg' %}" onclick="changeMain(this)" />
+                <img src="{% static 'projects/cer20.jpg' %}" onclick="changeMain(this)" />
+                <!-- Add more images if needed -->
+            </div>
+            <button class="arrow arrow-right" onclick="scrollThumbnails(200)">&#8594;</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function changeMain(img) {
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = img.src;
+    }
+
+    function scrollThumbnails(amount) {
+        const container = document.getElementById("thumbnailsContainer");
+        container.scrollLeft += amount;
+    }
+</script>
+{% endblock content %}

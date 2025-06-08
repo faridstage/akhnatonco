@@ -30,7 +30,10 @@ urlpatterns = [
     path('projects/<int:id>/edit/', views.edit_project, name='edit_project'),
     path('projects/image/<int:image_id>/delete/', views.delete_project_image, name='delete_project_image'),
     path('about/',views.about,name='about'),
-    path('tools/',views.tools,name='tools')
+    path('tools/',views.tools,name='tools'),
+    path('consultants/',views.consultants,name='consultants'),
+    path('sub-contractors/',views.subContractors,name='sub-contractors'),
+    path('certificates-of-appreciation/',views.certificates_of_appreciation,name='certificates_of_appreciation'),
     
 ] 
 

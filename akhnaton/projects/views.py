@@ -82,3 +82,12 @@ def about(request):
 def tools(request):
     return render(request,'projects/tools.html')
 
+def consultants(request):
+    return render(request,'projects/consultants.html')
+
+def subContractors(request):
+    return render(request,'projects/sub-contractors.html')
+
+def certificates_of_appreciation(request):
+    return render(request,'projects/certificates-of-appreciation.html')
+

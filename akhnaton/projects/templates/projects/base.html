@@ -90,14 +90,19 @@
                             href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'about' or request.resolver_match.url_name == 'tools' %}active{% endif %}"
+                        <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'about' or request.resolver_match.url_name == 'tools' or request.resolver_match.url_name == 'consultants' or request.resolver_match.url_name == 'sub-contractors' or request.resolver_match.url_name == 'certificates_of_appreciation' %}active{% endif %}"
                             href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
                             aria-expanded="false">
                             About Us
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+                            style="background-color: rgb(227, 171, 67);">
                             <li><a class="dropdown-item" href="{% url 'about' %}">About Akhnaton</a></li>
                             <li><a class="dropdown-item" href="{% url 'tools' %}">Equipment, & Tools</a></li>
+                            <li><a class="dropdown-item" href="{% url 'consultants' %}">Consultants</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sub-contractors' %}">Sub-Contractors</a></li>
+                            <li><a class="dropdown-item" href="{% url 'certificates_of_appreciation' %}">Certificates of
+                                    Appreciation</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
