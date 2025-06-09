@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import ProjectImageFormSet, ProjectForm
 
-from .models import Category, Project, ProjectImage
+from .models import Category, ContactMessage, Project, ProjectImage
 
 
 # Create your views here.
@@ -90,4 +90,16 @@ def subContractors(request):
 
 def certificates_of_appreciation(request):
     return render(request,'projects/certificates-of-appreciation.html')
+
+def contact(request):
+    context = {}
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        send_copy = True if request.POST.get('send_copy') else False
+
+        ContactMessage.objects.create(name=name, email=email, message=message, send_copy=send_copy)
+        context['form_submitted'] = True 
+    return render(request,'projects/contact.html',context)
 

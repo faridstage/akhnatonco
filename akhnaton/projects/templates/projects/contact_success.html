@@ -1,0 +1,21 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+
+{% block navbar_class %}
+navbar-dark bg-white sticky-top custom-sticky-navbar
+{% endblock navbar_class %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thanks for your message</h5>
+                    <p class="card-text">We will get back to you soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
