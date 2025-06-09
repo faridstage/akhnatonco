@@ -69,12 +69,12 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
 
             <div class="row">
                 {% for project in projects %}
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-4">
                     <div class="card h-100 shadow-sm">
                         <img src="{{ project.titleImage.url }}" class="card-img-top"
                             style="height: 200px; object-fit: cover;" alt="Project Image">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ project.name }}</h5>
+                            <h5 class="card-title" style="color: black;font-weight: 900;">{{ project.name }}</h5>
                             <div class="mt-auto">
                                 <a class="btn btn-warning btn-sm w-100 mb-2"
                                     href="{% url 'project_detail' project.id %}">View Project</a>
