@@ -64,7 +64,7 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
         <!-- Main Content (Projects Grid) -->
         <div class="col-md-9">
             <h1 class="text-center mb-4" style="color: rgb(53, 55, 17); font-family: Stencil Std, fantasy;">
-                Akhnatonco Projects
+                Akhnatonco Projects <i class="fas fa-building"></i>
             </h1>
 
             <div class="row">
@@ -74,7 +74,8 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
                         <img src="{{ project.titleImage.url }}" class="card-img-top"
                             style="height: 200px; object-fit: cover;" alt="Project Image">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title" style="color: black;font-weight: 900;">{{ project.name }}</h5>
+                            <h5 class="card-title text-center" style="color: black;font-weight: 900;">{{ project.name }}
+                            </h5>
                             <div class="mt-auto">
                                 <a class="btn btn-warning btn-sm w-100 mb-2"
                                     href="{% url 'project_detail' project.id %}">View Project</a>
