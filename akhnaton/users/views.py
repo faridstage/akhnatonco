@@ -4,6 +4,6 @@ from users.forms import LoginForm
 
 # Create your views here.
 
-def Login(request):
+def login(request):
     form = LoginForm()
     return render(request,'users/login.html',{'form':form})
