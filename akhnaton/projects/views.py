@@ -1,12 +1,12 @@
 from django.shortcuts import get_object_or_404, redirect, render
-
+from django.contrib.auth.decorators import login_required
 from .forms import ProjectImageFormSet, ProjectForm
 
 from .models import Category, ContactMessage, Project, ProjectImage
 
 
 # Create your views here.
-
+@login_required
 def add_project(request):
     if request.method == 'POST':
         form =  ProjectForm(request.POST,request.FILES)
@@ -21,7 +21,7 @@ def add_project(request):
         form = ProjectForm()
     return render(request,'projects/add.html',{'form':form})
 
-
+@login_required
 def edit_project(request, id):
     project = get_object_or_404(Project,id=id)
     if request.method == 'POST':
@@ -41,6 +41,7 @@ def edit_project(request, id):
 
 from django.views.decorators.http import require_POST
 
+@login_required
 @require_POST
 def delete_project_image(request, image_id):
     image = get_object_or_404(ProjectImage, id=image_id)
@@ -90,6 +91,9 @@ def subContractors(request):
 
 def certificates_of_appreciation(request):
     return render(request,'projects/certificates-of-appreciation.html')
+
+def services(request):
+    return render(request,'projects/services.html')
 
 def contact(request):
     context = {}

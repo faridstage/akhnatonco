@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'users.middleware.RestrictAdminAccessMiddleware',
 ]
 
 ROOT_URLCONF = 'akhnaton.urls'
@@ -133,3 +135,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 TIME_ZONE = 'Africa/Cairo'
 USE_TZ = True
+
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/' 

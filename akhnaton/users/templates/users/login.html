@@ -1,12 +1,42 @@
 {% extends 'projects/base.html' %}
+{% load widget_tweaks %}
 
 {% block navbar_class %}
 navbar-dark bg-white sticky-top custom-sticky-navbar
 {% endblock navbar_class %}
 
-
 {% block content %}
-Form :
+<div class="container mt-5" style="max-width: 500px;">
+    <h3 class="text-center mb-4">Login</h3>
+    {% if error_message %}
+    <div class="alert alert-danger text-center" role="alert">
+        {{ error_message }}
+    </div>
+    {% endif %}
+    <form method="post" novalidate>
+        {% csrf_token %}
 
-{{ form }}
+        <div class="form-outline mb-4">
+            {{ form.username.label_tag }}
+            {{ form.username|add_class:"form-control" }}
+            {% if form.username.errors %}
+            <div class="text-danger small mt-1">
+                {{ form.username.errors }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-outline mb-4">
+            {{ form.password.label_tag }}
+            {{ form.password|add_class:"form-control" }}
+            {% if form.password.errors %}
+            <div class="text-danger small mt-1">
+                {{ form.password.errors }}
+            </div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-block mb-4 w-100">Login</button>
+    </form>
+</div>
 {% endblock content %}

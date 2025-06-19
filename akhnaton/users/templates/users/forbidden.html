@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Forbidden</title>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1C2127;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .neon {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 6rem;
+            color: #5BE0B3;
+            text-shadow: 0 0 5px #6EECC1;
+            animation: flux 2s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .message2 {
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 90%;
+            margin-bottom: 40px;
+        }
+
+        .door-frame {
+            height: 250px;
+            width: 150px;
+            border-radius: 70px 70px 0 0;
+            background-color: #8594A5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .door {
+            height: 220px;
+            width: 120px;
+            border-radius: 50px 50px 0 0;
+            background-color: #A0AEC0;
+            position: relative;
+        }
+
+        .rectangle {
+            height: 40px;
+            width: 15px;
+            background-color: #CBD8E6;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 60px;
+            left: 15px;
+        }
+
+        .handle {
+            height: 6px;
+            width: 30px;
+            border-radius: 3px;
+            background-color: #EBF3FC;
+            position: absolute;
+            bottom: 40px;
+            left: 25px;
+        }
+
+        .window {
+            height: 30px;
+            width: 80px;
+            background-color: #1C2127;
+            border-radius: 3px;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .eye {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 5px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: white;
+            animation: eye 7s ease-in-out infinite;
+        }
+
+        .eye2 {
+            left: 40px;
+        }
+
+        .leaf {
+            height: 30px;
+            width: 80px;
+            background-color: #8594A5;
+            border-radius: 3px;
+            animation: leaf 7s infinite;
+            transform-origin: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes leaf {
+
+            0%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            5%,
+            70% {
+                transform: scaleX(0.2);
+            }
+
+            75% {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes eye {
+
+            0%,
+            5% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            20%,
+            35% {
+                transform: translateX(10px);
+            }
+
+            40%,
+            60% {
+                transform: translateX(-10px);
+            }
+
+            65% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes flux {
+
+            0%,
+            100% {
+                text-shadow: 0 0 5px #00FFC6, 0 0 15px #00FFC6, 0 0 50px #00FFC6,
+                    0 0 2px #B9FFE8, 2px 2px 3px #12E29C;
+                color: #4BFFEF;
+            }
+
+            50% {
+                text-shadow: 0 0 3px #00B58D, 0 0 7px #00B58D, 0 0 25px #00B58D,
+                    0 0 2px #00B58D, 2px 2px 3px #006A60;
+                color: #63D3AE;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .neon {
+                font-size: 4rem;
+            }
+
+            .message {
+                font-size: 1.3rem;
+            }
+
+            .door-frame {
+                height: 200px;
+                width: 120px;
+            }
+
+            .door {
+                height: 180px;
+                width: 100px;
+            }
+
+            .window {
+                width: 60px;
+            }
+
+            .leaf,
+            .eye,
+            .eye2 {
+                display: none;
+                /* simplify for very small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="neon">403</div>
+    <div class="message">You are not authorized.</div>
+    <div class="message2">You tried to access a page you did not have prior authorization for.</div>
+    <div class="door-frame">
+        <div class="door">
+            <div class="rectangle"></div>
+            <div class="handle"></div>
+            <div class="window">
+                <div class="eye"></div>
+                <div class="eye eye2"></div>
+                <div class="leaf"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
