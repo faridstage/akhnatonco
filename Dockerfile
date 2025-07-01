@@ -4,10 +4,10 @@ ARG PYTHON_VERSION=3.12-slim-bullseye
 FROM python:${PYTHON_VERSION}
 
 # Create a virtual environment
-RUN python -m venv /opt/venv
+# RUN python -m venv /opt/venv
 
 # Set the virtual environment as the current location
-ENV PATH=/opt/venv/bin:$PATH
+# ENV PATH=/opt/venv/bin:$PATH
 
 # Upgrade pip
 RUN pip install --upgrade pip
@@ -38,7 +38,7 @@ WORKDIR /code
 COPY requirements.txt /tmp/requirements.txt
 
 # copy the project code into the container's working directory
-COPY ./src /code
+COPY ./akhnaton /code
 
 # Install the Python project requirements
 RUN pip install -r /tmp/requirements.txt
