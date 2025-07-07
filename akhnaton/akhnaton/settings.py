@@ -61,6 +61,10 @@ MIDDLEWARE = [
     'users.middleware.RestrictAdminAccessMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://akhnatonco-production-1609.up.railway.app",
+]
+
 ROOT_URLCONF = 'akhnaton.urls'
 
 TEMPLATES = [
