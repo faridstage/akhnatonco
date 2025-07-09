@@ -20,6 +20,10 @@
             font-size: x-large;
         }
 
+        .nav-item.active>.nav-link {
+            color: #ffc107;
+        }
+
         .navbar .nav-link:hover {
             color: #ffc107;
         }
@@ -89,10 +93,10 @@
                         <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
                             href="{% url 'index' %}">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'about' or request.resolver_match.url_name == 'tools' or request.resolver_match.url_name == 'consultants' or request.resolver_match.url_name == 'sub-contractors' or request.resolver_match.url_name == 'certificates_of_appreciation' %}active{% endif %}"
-                            href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
-                            aria-expanded="false">
+                    <li
+                        class="nav-item dropdown {% if request.resolver_match.url_name == 'about' or request.resolver_match.url_name == 'tools' or request.resolver_match.url_name == 'consultants' or request.resolver_match.url_name == 'sub-contractors' or request.resolver_match.url_name == 'certificates_of_appreciation' %}active{% endif %}">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
                             About Us
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"

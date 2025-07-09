@@ -37,6 +37,7 @@ urlpatterns = [
     path('sub-contractors/',views.subContractors,name='sub-contractors'),
     path('certificates-of-appreciation/',views.certificates_of_appreciation,name='certificates_of_appreciation'),
     path('services/',views.services,name='services'),
+    path('company-profile/',views.download_company_profile,name='company-profile'),
     
 ] 
 

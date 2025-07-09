@@ -1,3 +1,5 @@
+import os
+from django.http import FileResponse, Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from .forms import ProjectImageFormSet, ProjectForm
@@ -107,3 +109,9 @@ def contact(request):
         context['form_submitted'] = True 
     return render(request,'projects/contact.html',context)
 
+def download_company_profile(request):
+    file_path = os.path.join('media','pdfs','company-profile.pdf')
+    try:
+        return FileResponse(open(file_path,'rb'), as_attachment=True,filename='Akhnaton-Portfolio.pdf')
+    except FileNotFoundError:
+        raise Http404("File not found.")
