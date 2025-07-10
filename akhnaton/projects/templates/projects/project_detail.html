@@ -9,8 +9,115 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
 <div class="container-fluid mt-5">
     <div class="row">
         <h2 class="mb-5"
-            style="justify-content: center; text-align: center;font-weight: 900;color: black;font-size:50px ;">
+            style="justify-content: center; text-align: center;font-weight: 900;color:#e3a900;font-size:50px ;">
             {{ project.name }}</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="d-flex justify-content-center" style="font-size: 40px;background: -webkit-linear-gradient( #e3a900, #000000);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;font-weight: 900;">
+                        Project Details
+                    </h3>
+                    <hr style="border: 3px solid rgb(188, 153, 0);">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-tag" style="width: 20px;"></i>
+                                    <h6 class="mx-2" style="color: #e3a900;"> Category: </h6>
+                                </div>
+                                <h6>{{ project.category }}</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-center mb-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center" style="margin-left: -23px;">
+                                    <i class="fas fa-location-dot" style="width: 20px;"></i>
+                                    <h6 class="mx-2" style="color: #e3a900;"> Location: </h6>
+                                </div>
+                                <h6>{{ project.location }}</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-center mb-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center" style="min-width: 150px;">
+                                    <i class="far fa-calendar-days" style="width: 20px;margin-left: 30px;"></i>
+                                    <h6 class="mx-2" style="color: #e3a900;"> Execution Period: </h6>
+                                </div>
+                                <h6>{{ project.execution_period }}</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-center mb-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center" style="margin-left: -10px;">
+                                    <i class="fas fa-check" style="width: 20px;"></i>
+                                    <h6 class="mx-2" style="color: #e3a900;"> Client: </h6>
+                                </div>
+                                <h6>{{ project.client }}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="d-flex justify-content-center" style="font-size: 40px;background: -webkit-linear-gradient( #e3a900, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;font-weight: 900;">
+                        Project Description
+                    </h3>
+                    <hr style="border: 3px solid rgb(188, 153, 0);">
+
+                    <!-- ADD THIS WRAPPER FOR THE DESCRIPTION -->
+                    <div class="px-3">
+                        <p style="text-align: center; word-break: break-word;">
+                            {{project.info}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="d-flex justify-content-center" style="font-size: 40px;background: -webkit-linear-gradient( #e3a900, #000000);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;font-weight: 900;">
+                        Statistics
+                    </h3>
+                    <hr style="border: 3px solid rgb(188, 153, 0);">
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-center" style="font-size: x-large;">
+                            <i class="fas fa-hammer mx-2"></i>
+                            <h6 style="font-size: x-large;color: #e3a900;">Equipments: </h6>
+                            <h6 style="font-size: x-large;">{{project.equipments}} </h6>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <i style="font-size: x-large;" class="fas fa-wrench mx-2"></i>
+                            <h6 style="font-size: x-large;color: #e3a900;">Workers: </h6>
+                            <h6 style="font-size: x-large;">{{project.workers}} </h6>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-center">
+                            <i style="font-size: x-large;" class="fas fa-pen-ruler mx-2"></i>
+                            <h6 style="font-size: x-large;color: #e3a900;">Engineers: </h6>
+                            <h6 style="font-size: x-large;">{{project.engineers}} </h6>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <i style="font-size: x-large;" class="far fa-money-bill-1 mx-2"></i>
+                            <h6 style="font-size: x-large;color: #e3a900;">Millions: </h6>
+                            <h6 style="font-size: x-large;">{{project.million}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr>
         {% for image in images %}
         <div style="justify-content: center; text-align: center;" class="col-md-3">
             <div class="card">

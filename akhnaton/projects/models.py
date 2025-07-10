@@ -6,6 +6,14 @@ class Project(models.Model):
     name = models.CharField(max_length=100)
     titleImage = models.ImageField(upload_to='project_images/', default='coming.jpg')
     category = models.ForeignKey('Category', related_name='projects', on_delete=models.SET_NULL, null=True, blank=True)
+    location = models.CharField(max_length=100,default="Giza")
+    execution_period=models.CharField(max_length=100,default="Giza")
+    client = models.CharField(max_length=100,default="HydePark")
+    equipments =models.IntegerField(default=10)
+    workers =models.IntegerField(default=10)
+    engineers =models.IntegerField(default=10)
+    info = models.CharField(max_length=500,default="Lorem ipsum")
+    million = models.IntegerField(default=2)
 
 
     def __str__(self):

@@ -9,7 +9,7 @@ from django.forms import modelformset_factory
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name', 'titleImage','category']
+        fields = ['name', 'titleImage','category','location','execution_period','client','equipments','workers','engineers','info','million']
 
 class ProjectImageForm(forms.ModelForm):
     class Meta:
