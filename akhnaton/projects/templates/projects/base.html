@@ -48,6 +48,11 @@
             z-index: 1000;
             padding: 10px 0;
         }
+
+        .btn-outline-dark:hover {
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 
@@ -188,7 +193,9 @@
 
     {% block footer %}
     <!-- Footer -->
-    <footer style="background-color: rgb(235, 184, 16);" class="mt-5 text-center">
+    <footer style=" background: RGB(235, 184, 16);
+                    background: radial-gradient(circle,rgba(235, 184, 16, 1) 0%, rgba(0, 0, 0, 1) 100%);"
+        class="mt-5 text-center">
         <!-- Grid container -->
         <div class="container p-4">
             <!-- Section: Social media -->
@@ -220,45 +227,6 @@
             <!-- Section: Social media -->
             {% endblock social %}
 
-
-
-            <!-- Section: Form -->
-            <section class="">
-                <form action="">
-                    <!--Grid row-->
-                    <div class="row d-flex justify-content-center">
-                        <!--Grid column-->
-                        <div class="col-auto">
-                            <p class="pt-2">
-                                <strong>Send Us Message</strong>
-                            </p>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-md-5 col-12">
-                            <!-- Email input -->
-                            <div data-mdb-input-init class="form-outline mb-4">
-                                <input type="email" id="form5Example24" class="form-control" />
-                                <label class="form-label" for="form5Example24">Your Name</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-auto">
-                            <!-- Submit button -->
-                            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
-                                Send
-                            </button>
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                </form>
-            </section>
-            <!-- Section: Form -->
-
             <!-- Section: Text -->
             <section class="mb-4">
                 <p>
@@ -266,99 +234,63 @@
                     providing a broad spectrum of Real Estate and Construction
                 </p>
             </section>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="facebook-ads d-flex justify-content-evenly">
+                            <div style="border: 2px solid #1877F2;width: 370px;">
+                                <div class="ad-card row m-0 p-0">
+                                    <div class="col-6">
+                                        <h3 class="col-6 m-0 p-0" style="color: #1877F2;">Facebook</h3>
+                                        <h5 style="color: rgb(201, 200, 198);">Find us on facebook </h5>
+                                        <button class="btn btn-outline-dark">Visit</button>
+                                    </div>
+
+                                    <img class="col-6 m-0 p-0" src="{% static '../media/facebookAd.png' %}"
+                                        height="150px" width="350px" alt="Facebook Ad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="youtube-ads d-flex justify-content-evenly">
+                            <div style="border: 2px solid #FF0000;width: 370px;">
+                                <div class="ad-card row m-0 p-0">
+                                    <div class="col-6">
+                                        <h3 class="col-6 m-0 p-0" style="color: #FF0000;">Youtube</h3>
+                                        <h5 style="color: rgb(201, 200, 198);">Watch us on youtube </h5>
+                                        <button class="btn btn-outline-dark">Visit</button>
+                                    </div>
+                                    <img class="col-6 m-0 p-0" src="{% static '../media/youtubeAd.png' %}"
+                                        height="150px" width="350px" alt="Facebook Ad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-4 mb-4">
+                        <div class="linkedin-ads d-flex justify-content-evenly">
+                            <div style="border: 2px solid #0077B5;width: 370px;">
+                                <div class="ad-card row m-0 p-0">
+                                    <div class="col-6">
+                                        <h3 class="col-6 m-0 p-0" style="color: #0077B5;">Linkedin</h3>
+                                        <h5 style="color:rgb(201, 200, 198);">know more about us on linkedin </h5>
+                                        <button class="btn btn-outline-dark">Visit</button>
+                                    </div>
+
+                                    <img class="col-6 m-0 p-0" src="{% static '../media/linkedinAd.png' %}"
+                                        height="150px" width="350px" alt="Facebook Ad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Section: Text -->
 
+
             <!-- Section: Links -->
-            <section class="">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Links</h5>
 
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a class="text-body" href="#!">Link 1</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 4</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Links</h5>
-
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a class="text-body" href="#!">Link 1</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 4</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Links</h5>
-
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a class="text-body" href="#!">Link 1</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 4</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Links</h5>
-
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a class="text-body" href="#!">Link 1</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 2</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 3</a>
-                            </li>
-                            <li>
-                                <a class="text-body" href="#!">Link 4</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
         </div>
         <!-- Grid container -->
 

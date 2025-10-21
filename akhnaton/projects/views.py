@@ -54,7 +54,7 @@ def delete_project_image(request, image_id):
 
 
 def index(request):
-    projects = Project.objects.all()[:3]
+    projects = Project.objects.all()[:4]
     return render(request,'projects/index.html',{'projects':projects})
 
 
