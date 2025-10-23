@@ -9,16 +9,63 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
 
 
 {% block content %}
+<style>
+    h5 {
+        color: rgb(127, 124, 124);
+    }
+
+    .d {
+        color: rgb(189, 169, 115);
+    }
+
+    .sec {
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    .sec:hover {
+        background-color: orange;
+    }
+
+    .sec:hover .sec-content h5 {
+        color: white;
+    }
+
+    .sec2 {
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    .sec2:hover {
+        background-color: orange;
+    }
+
+    .sec2:hover .sec-content2 h5 {
+        color: white;
+    }
+
+    .sec3 {
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    .sec3:hover {
+        background-color: orange;
+    }
+
+    .sec3:hover .sec-content3 h5 {
+        color: white;
+    }
+</style>
 <!-- Service 1 - Bootstrap Brain Component -->
 <section class="py-5 py-xl-8">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7">
                 <h2 class="mb-4 display-5 text-center" style="font-weight: 900;color: orange;">Our Services</h2>
-                <p class="text-secondary mb-5 text-center">We don't just construct buildings — we create lasting value
-                    with every brick. From design to delivery, our team ensures quality, safety, and precision at every
-                    stage of the process. Whether it's residential, commercial, or industrial, we build with purpose,
-                    passion, and pride.</p>
+                <p class="text-secondary mb-5 text-center">Akhanton for Construction and Real Estate Development (ACRED)
+                    offers a full scope of building construction services, including Layouts, Architecture, Engineering
+                    Design and Project Management Services.</p>
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
             </div>
         </div>
@@ -26,13 +73,22 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
 
     <div class="container">
         <div class="row ">
-            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-12 col-md-10 col-lg-12 col-xl-12 col-xxl-12">
                 <h3 class="mb-4" style="font-weight: 900;color: rgb(158, 104, 3);">Description of services:
                 </h3>
-                <p class="text-secondary mb-5">We don't just construct buildings — we create lasting value
-                    with every brick. From design to delivery, our team ensures quality, safety, and precision at every
-                    stage of the process. Whether it's residential, commercial, or industrial, we build with purpose,
-                    passion, and pride.</p>
+                <p class="text-secondary"><b>ACRED</b> Engineers are highly experienced problem solvers with
+                    considerable in depth Knowledge of all construction materials and building structures. In- house
+                    computer systems assist our Structural Engineers in implementing your building design in concrete,
+                    structural steel or masonry.</p>
+                <p class="text-secondary"><b>ACRED</b> multi – discipline capabilities provide an effective Project
+                    Management system. Our professionals manage all aspects of project coordination on Owner behalf,
+                    complement the client's staff.</p>
+                <p class="text-secondary mb-5"><b>ACRED</b> objective, professional approach to design and construction
+                    control ensures that the client's completed building fulfills all expectations: financial,
+                    functional, and aesthetic.</p>
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
             </div>
         </div>
@@ -40,76 +96,153 @@ navbar-dark bg-white sticky-top custom-sticky-navbar
 
     <div class="container overflow-hidden">
         <div class="row gy-5">
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="text-center px-xl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                        class="bi bi-1-circle-fill text-primary mb-4" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z" />
-                    </svg>
-                    <h5 class="m-2">SEO Consulting</h5>
-                    <p class="m-0 text-secondary">We can help you to improve your website's visibility in search engine
-                        results pages (SERPs). This can lead to more traffic to your website.</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="text-center px-xl-2 sec" style="padding-bottom: 20px;">
+                    <img src="{% static '../media/serviceicon.png' %}" alt="">
+                    <div class="sec-content">
+                        <h5 class="m-2 mb-5" style="font-size: x-large;font-weight: 900;">Architectural &
+                            Civil Engineering
+                        </h5>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Master planning</b></h5>
+                        <hr>
+                        <h5 class=" m-0" style="font-weight: 900;"><b>Space planning</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Preliminary Design</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Economic analysis</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Final Design</b></h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Construction
+                                observation</b></h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Shop drawings</b></h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="text-center px-xl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                        class="bi bi-2-circle-fill text-primary mb-4" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z" />
-                    </svg>
-                    <h5 class="m-2">Web Development</h5>
-                    <p class="m-0 text-secondary">We can help you to design and develop a new website, or to update your
-                        existing website. We specialize in creating user-friendly websites.</p>
+            <div class="col-12 col-sm-5 col-lg-4 pt-3">
+                <div class="text-center px-xl-2 sec2" style="padding-bottom: 20px;">
+                    <img class="mb-2" src="{% static '../media/serviceicon2.png' %}" width="70" height="70" alt="">
+                    <div class="sec-content2">
+                        <h5 class="m-2 mb-5" style="font-size: x-large;font-weight: 900;">Projects Construction
+                        </h5>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Scaffold Work</b></h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Finishing Work:</b></h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300; "><b>&nbsp;&nbsp;- Flooring
+                                Works</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Aluminum
+                                Work</b></h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Glass
+                                Work</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Gypsum
+                                board
+                                Work</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- False
+                                Ceiling
+                                Work</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Painting
+                                Work</b></h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Wood
+                                Work</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Electromechanical
+                                Work:</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- HVAC
+                                Work</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Plumbing
+                                Work</b></h5>
+                        <hr>
+                        <h5 class="m-0 d" style="font-weight: 300;"><b>&nbsp;&nbsp;- Fire
+                                Fighting
+                                Works &
+                                Fire alarm
+                                Works</b></h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="text-center px-xl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                        class="bi bi-3-circle-fill text-primary mb-4" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z" />
-                    </svg>
-                    <h5 class="m-2">Digital Strategy</h5>
-                    <p class="m-0 text-secondary">We can help you to develop a digital strategy that will help you to
-                        achieve your business goals. This includes digital marketing for your business.</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="text-center px-xl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                        class="bi bi-4-circle-fill text-primary mb-4" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM7.519 5.057c-.886 1.418-1.772 2.838-2.542 4.265v1.12H8.85V12h1.26v-1.559h1.007V9.334H10.11V4.002H8.176c-.218.352-.438.703-.657 1.055ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z" />
-                    </svg>
-                    <h5 class="m-2">Web Design</h5>
-                    <p class="m-0 text-secondary">We can help you to create a visually appealing and user-friendly
-                        website. We take into account your brand identity and target audience.</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="text-center px-xl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                        class="bi bi-5-circle-fill text-primary mb-4" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.006 4.158c1.74 0 2.924-1.119 2.924-2.806 0-1.641-1.178-2.584-2.56-2.584-.897 0-1.442.421-1.612.68h-.064l.193-2.344h3.621V4.002H5.791L5.445 8.63h1.149c.193-.358.668-.809 1.435-.809.85 0 1.582.604 1.582 1.57 0 1.085-.779 1.682-1.57 1.682-.697 0-1.389-.31-1.53-1.031H5.276c.065 1.213 1.149 2.115 2.72 2.115Z" />
-                    </svg>
-                    <h5 class="m-2">Digital Marketing</h5>
-                    <p class="m-0 text-secondary">We can help you to promote your business online through a variety of
-                        digital marketing channels, including SEO, PPC, and email marketing.</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="text-center px-xl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                        class="bi bi-6-circle-fill text-primary mb-4" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c-1.868 0-3.116 1.395-3.116 4.407 0 1.183.228 2.039.597 2.642.569.926 1.477 1.254 2.409 1.254 1.629 0 2.847-1.013 2.847-2.783 0-1.676-1.254-2.555-2.508-2.555-1.125 0-1.752.61-1.98 1.155h-.082c-.012-1.946.727-3.036 1.805-3.036.802 0 1.213.457 1.312.815h1.29c-.06-.908-.962-1.899-2.573-1.899Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z" />
-                    </svg>
-                    <h5 class="m-2">Media Production</h5>
-                    <p class="m-0 text-secondary">We can help you to create high-quality videos, photos, and other media
-                        content. We can help you to distribute your content through a variety of channels.</p>
+            <div class="col-12 col-sm-6 col-lg-4 pt-3">
+                <div class="text-center px-xl-2 sec3" style="padding-bottom: 20px;">
+                    <img class="mb-3" src="{% static '../media/serviceicon3.png' %}" alt="">
+                    <div class="sec-content3">
+                        <h5 class="m-2 mb-5" style="font-size: x-large;font-weight: 900;">Projects
+                            Management
+                        </h5>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Feasibility Studies</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Owner's
+                                Representative</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Identifications of owner
+                                needs</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Technical advice</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Design team
+                                selection</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Procedures advice</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Overview design &
+                                construction</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Team progress
+                                monitoring</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Project scheduling/
+                                Budgets</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Construction
+                                procurement</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Change order
+                                evaluations</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Progress payments</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Construction progress
+                                monitoring</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Inspection and
+                                testing</b>
+                        </h5>
+                        <hr>
+                        <h5 class="m-0" style="font-weight: 900;"><b>Construction contract
+                                closeout</b>
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>

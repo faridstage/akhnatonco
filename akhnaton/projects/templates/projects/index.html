@@ -174,8 +174,8 @@
         <div class="row">
             <div class="col-12 col-lg-3 col-md-6 mb-5 position-relative" style="font-size: xxx-large;">
                 <i class="fas fa-cubes fa-3x mt-3" style="color: rgb(66, 36, 0);"></i>
-                <h5 class="fw-bold mb-2 counter" data-target="5000"
-                    style="color: rgb(243, 147, 31);font-size: xx-large;">0</h5>
+                <h5 class="fw-bold mb-2 counter" data-target="50" style="color: rgb(243, 147, 31);font-size: xx-large;">
+                    0</h5>
                 <h6 class="fw-normal mb-0">Projects</h6>
                 <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
             </div>
@@ -190,8 +190,8 @@
 
             <div class="col-lg-3 col-md-6 mb-5 position-relative" style="font-size: xxx-large;">
                 <i class="fas fa-clipboard-check fa-3x mt-3" style="color: rgb(66, 36, 0);"></i>
-                <h5 class="fw-bold mb-2 counter" data-target="100"
-                    style="color: rgb(243, 147, 31);font-size: xx-large;">0</h5>
+                <h5 class="fw-bold mb-2 counter" data-target="70" style="color: rgb(243, 147, 31);font-size: xx-large;">
+                    0</h5>
                 <h6 class="fw-normal mb-0">Clients</h6>
                 <div class="vr vr-blurry position-absolute my-0 h-100 d-none d-md-block top-0 end-0"></div>
             </div>
@@ -310,15 +310,18 @@
         </div>
         <div class="col-12 col-md-12 col-lg-6 mt-1">
             <!-- Modal gallery -->
-            <section class="">
+            <section class="mb-5">
                 <!-- Section: Images -->
                 <section class="">
                     <div class="row">
+                        <h2 style="text-align: center;background-color: #FFAB00;border-radius: 10px;">
+                            Recent projects
+                        </h2>
                         {% for project in projects %}
                         <div class="col-6 col-lg-6 col-md-6 mb-4 mb-lg-0">
                             <div class="bg-image hover-overlay ripple shadow-1-strong rounded"
                                 data-ripple-color="light">
-                                <img src="{{ project.titleImage.url }}" class="w-100" width="150px" height="150px" />
+                                <img src="{{ project.titleImage.url }}" class="w-100" width="150px" height="130px" />
                                 <h5 style="text-align: center;">{{ project.name }}</h5>
                                 <a href="{% url 'project_detail' project.id %}">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
@@ -452,7 +455,7 @@
 
                 if (count < target) {
                     counter.innerText = count + increment > target ? target : count + increment;
-                    setTimeout(updateCount, 20); // adjust for smoothness
+                    setTimeout(updateCount, 100); // adjust for smoothness
                 } else {
                     counter.innerText = target;
                 }
